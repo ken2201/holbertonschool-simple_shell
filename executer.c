@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- *executer_commande - execute a command given in the shell
+ *execute_command - execute a command given in the shell
  *@commande : the command given
  *@args : array of strings
  *Return: 1 if success and ask for the next command
  */
 
 
-int executer_commande(char *commande, char *args[])
+int execute_command(char *commande, char *args[])
 {
 	pid_t pid;
 	int status;
