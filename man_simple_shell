@@ -1,0 +1,65 @@
+.NAME
+shell - a simple shell program
+
+.SYNOPSIS
+**shell**
+
+.DESCRIPTION
+`shell` is a basic shell program that provides a simple command-line interface. It supports executing external commands, built-in commands, and managing environment variables.
+
+.OPTIONS
+- None
+
+.COMMANDS
+1. **exit**
+   - Terminate the shell.
+
+2. **env**
+   - Print environment variables.
+
+.USAGE
+```bash
+$ shell
+```
+
+.INTERACTIVE MODE
+The shell operates in interactive mode, where it displays a prompt and waits for user input. Commands are entered line by line.
+
+.COMMAND LINE STRUCTURE
+- External commands: Single-word commands without arguments.
+- Built-in commands: "exit" and "env."
+
+.EXAMPLES
+1. Execute an external command:
+   ```bash
+   $ ls
+   ```
+
+2. Exit the shell:
+   ```bash
+   $ exit
+   ```
+
+3. Print environment variables:
+   ```bash
+   $ env
+   ```
+
+.EXIT STATUS
+- `EXIT_SUCCESS` (0) on successful execution.
+- `EXIT_FAILURE` (1) on failure or error.
+
+#AUTHOR
+Written by: 
+.Ken kersy NDAYISHIMIYE: ndayishimiyeken22@gmail.com
+
+#SEE ALSO
+- man(1)
+- execve(2)
+- fork(2)
+- waitpid(2)
+- getenv(3)
+- strtok(3)
+
+.SH COPYRIGHT
+Copyright © 2023 Holberton School Toulouse
