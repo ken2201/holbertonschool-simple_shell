@@ -7,9 +7,12 @@
  *Return: EXIT_SUCCESS upon successful execution, EXIT_FAILURE otherwise.
  */
 
-int main(int argc, char *argv[], char *envp[])
+int main(int argc __attribute__((unused)), char *argv[] __attribute__((unused)), char *envp[])
 {
-	char command[MAX_COMMAND_LENGTH], *args[MAX_ARGS], full_path[MAX_PATH_LENGTH];
+	char command[MAX_COMMAND_LENGTH];
+	char *args[MAX_ARGS];
+	char full_path[MAX_PATH_LENGTH];
+
 
 	while (display_prompt() && fgets(command, sizeof(command), stdin) != NULL)
 	{

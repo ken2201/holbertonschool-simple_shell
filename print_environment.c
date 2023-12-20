@@ -7,9 +7,12 @@
 
 int print_environment(char **env)
 {
-	for (char **env_var = env; *env_var != NULL; env_var++)
+	char **env_var = env;
+
+	while (*env_var != NULL)
 	{
 		printf("%s\n", *env_var);
+		env_var++;
 	}
 	return (1);
 }

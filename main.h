@@ -7,6 +7,10 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+#define MAX_COMMAND_LENGTH 100
+#define MAX_ARGS 10
+#define MAX_PATH_LENGTH 100
+
 int executer_commande(char *commande);
 int execute_command(char *command, char *args[]);
 int find_executable(char *command, char *full_path);
