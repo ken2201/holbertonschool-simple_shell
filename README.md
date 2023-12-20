@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Simple Shell
 
 The Simple Shell is a minimalistic command-line interpreter that allows users to execute basic commands and interact with the system. It supports executing external commands and includes a few built-in commands.
@@ -37,4 +38,4 @@ $ exit
 To exiit the shell, use the exit command.
 
 authors are to be finned on their github 
-this project was made by students from holberton school toulouse
+this project was made by students from holberton school toulouse.
