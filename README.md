@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Simple Shell
 
 The Simple Shell is a minimalistic command-line interpreter that allows users to execute basic commands and interact with the system. It supports executing external commands and includes a few built-in commands.
