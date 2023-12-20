@@ -11,4 +11,5 @@ int executer_commande(char *commande);
 int execute_command(char *command, char *args[]);
 int find_executable(char *command, char *full_path);
 int print_environment(char **env);
-int afficher_inviter(void);
+int display_prompt(void);
+int main(int argc, char *argv[], char *envp[]);

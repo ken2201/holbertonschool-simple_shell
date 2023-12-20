@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- *afficher_inviter - affiche le nom de l'inviter du shell
+ *display_prompt - affiche le nom de l'inviter du shell
  *
  * Return: 0 if error and 1 if success
  */
 
-int afficher_inviter(void)
+int display_prompt(void)
 {
 	if (write(STDOUT_FILENO, "$ ", 2) == -1)
 	{
