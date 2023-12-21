@@ -37,5 +37,5 @@ $ env
 $ exit
 To exiit the shell, use the exit command.
 
-authors are to be finned on their github 
+authors are to be finned on their github
 this project was made by students from holberton school toulouse.

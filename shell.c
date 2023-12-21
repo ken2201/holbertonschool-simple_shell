@@ -12,8 +12,7 @@ int main(int argc __attribute__((unused)),
 		char *envp[])
 {
 	char command[MAX_COMMAND_LENGTH];
-	char *args[MAX_ARGS];
-	char full_path[MAX_PATH_LENGTH], *token;
+	char *args[MAX_ARGS], full_path[MAX_PATH_LENGTH], *token;
 	int arg_count;
 
 	while (display_prompt() && fgets(command, sizeof(command), stdin) != NULL)
@@ -30,22 +29,22 @@ int main(int argc __attribute__((unused)),
 			token = strtok(NULL, " ");
 		}
 		args[arg_count] = NULL;
-		if (strcmp(args[0], "exit") == 0)
+		if (args[0] != NULL && strcmp(args[0], "exit") == 0)
 		{
 			printf("Exiting shell...\n");
 			return (EXIT_SUCCESS);
-		} else if (strcmp(args[0], "env") == 0)
+		} else if (args[0] != NULL && strcmp(args[0], "env") == 0)
 		{
 			if (!print_environment(envp))
 				return (EXIT_FAILURE);
 			continue;
 		}
-		if (!find_executable(args[0], full_path))
+		if (args[0] != NULL && !find_executable(args[0], full_path))
 		{
 			printf("Command not found: %s\n", args[0]);
 			continue;
 		}
-		if (!execute_command(full_path, args))
+		if (args[0] != NULL && !execute_command(full_path, args))
 		{
 			return (EXIT_FAILURE);
 		}
