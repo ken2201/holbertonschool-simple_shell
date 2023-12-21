@@ -11,15 +11,16 @@ int main(int argc __attribute__((unused)), char *argv[] __attribute__((unused)),
 {
 	char command[MAX_COMMAND_LENGTH];
 	char *args[MAX_ARGS];
-	char full_path[MAX_PATH_LENGTH];
-	int arg_count = 0;
-	char *token = strtok(command, " ");
+	char full_path[MAX_PATH_LENGTH], *token;
+	int arg_count;
 
 	while (display_prompt() && fgets(command, sizeof(command), stdin) != NULL)
 	{
 		command[strcspn(command, "\n")] = '\0';
 		if (strlen(command) == 0)
 			continue;
+		arg_count = 0;
+		token = strtok(command, " ");
 
 		while (token != NULL && arg_count < MAX_ARGS - 1)
 		{
