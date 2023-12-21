@@ -7,7 +7,9 @@
  *Return: EXIT_SUCCESS upon successful execution, EXIT_FAILURE otherwise.
  */
 
-int main(int argc __attribute__((unused)), char *argv[] __attribute__((unused)), char *envp[])
+int main(int argc __attribute__((unused)),
+		char *argv[] __attribute__((unused)),
+		char *envp[])
 {
 	char command[MAX_COMMAND_LENGTH];
 	char *args[MAX_ARGS];

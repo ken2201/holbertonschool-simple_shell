@@ -1,9 +1,15 @@
 #include "main.h"
-/*
- * find_executable - finds the full path of an executable in the system's PATH
- * @command : command given by the user
- * @full_path : the buffer where the full path will be stored
- *Return: 1 if found and 0 if otherwise
+/**
+ * find_executable - Finds the full path of an executable in the system's PATH.
+ *
+ * @command: A string representing the command given by the user.
+ * @full_path: A buffer to store the full path of the executable.
+ *
+ * This function searches for the specified command in the directories listed
+ * in the PATH environment variable. If the command is found and is executable,
+ * the full path is stored in the provided buffer.
+ *
+ * Return: 1 if the executable is found, 0 otherwise.
  */
 
 int find_executable(char *command, char *full_path)
