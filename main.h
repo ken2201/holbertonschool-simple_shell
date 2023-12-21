@@ -1,3 +1,7 @@
+#ifndef SIMPLE_SHELL_H
+#define SIMPLE_SHELL_H
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,3 +21,5 @@ int find_executable(char *command, char *full_path);
 int print_environment(char **env);
 int display_prompt(void);
 int main(int argc, char *argv[], char *envp[]);
+
+#endif
