@@ -12,22 +12,29 @@
  * Return: 1 if the executable is found, 0 otherwise.
  */
 
-int find_executable(char *command, char *full_path)
+char *find_executable(char *command)
 {
 	char *path = getenv("PATH");
 	char *path_copy = strdup(path);
 	char *token = strtok(path_copy, ":");
-
+	char *full_path;
+	if (strchr(command, '/') != NULL)
+	{
+	       return (command);
+	}
 	while (token != NULL)
 	{
-		snprintf(full_path, MAX_PATH_LENGTH, "%s/%s", token, command);
+		
+		full_path = malloc(sizeof(char *) * (strlen(token) + strlen(command) + 2));
+		sprintf(full_path, "%s/%s", token, command);
 		if (access(full_path, X_OK) == 0)
 		{
 			free(path_copy);
-			return (1);
+			return (full_path);
 		}
+		free(full_path);
 		token = strtok(NULL, ":");
 	}
 	free(path_copy);
-	return (0);
+	return (NULL);
 }

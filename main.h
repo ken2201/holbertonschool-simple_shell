@@ -17,7 +17,7 @@
 
 int executer_commande(char *commande);
 int execute_command(char *command, char *args[]);
-int find_executable(char *command, char *full_path);
+char *find_executable(char *command);
 int print_environment(char **env);
 int display_prompt(void);
 /**

@@ -12,7 +12,8 @@ int main(int argc __attribute__((unused)),
 		char *envp[])
 {
 	char command[MAX_COMMAND_LENGTH];
-	char *args[MAX_ARGS], full_path[MAX_PATH_LENGTH], *token;
+	char *args[MAX_ARGS], *token;
+	char *full_path;
 	int arg_count;
 
 	while (display_prompt() && fgets(command, sizeof(command), stdin) != NULL)
@@ -39,7 +40,8 @@ int main(int argc __attribute__((unused)),
 				return (EXIT_FAILURE);
 			continue;
 		}
-		if (args[0] != NULL && !find_executable(args[0], full_path))
+		full_path = find_executable(args[0]);
+		if (args[0] != NULL && !full_path)
 		{
 			printf("Command not found: %s\n", args[0]);
 			continue;
@@ -48,6 +50,6 @@ int main(int argc __attribute__((unused)),
 		{
 			return (EXIT_FAILURE);
 		}
-	}
+	}	
 	return (EXIT_SUCCESS);
 }
