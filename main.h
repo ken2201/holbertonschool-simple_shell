@@ -20,6 +20,16 @@ int execute_command(char *command, char *args[]);
 int find_executable(char *command, char *full_path);
 int print_environment(char **env);
 int display_prompt(void);
-int main(int argc, char *argv[], char *envp[]);
+/**
+ * main - Entry point for the simple shell program
+ * @argc: The number of command-line arguments.
+ * @argv: An array of strings representing the command-line arguments.
+ * @envp: An array of strings representing the environment variables.
+ * Return: EXIT_SUCCESS upon successful execution, EXIT_FAILURE otherwise.
+ */
+int main(int argc __attribute__((unused)),
+		char *argv[] __attribute__((unused)),
+		char *envp[]);
+
 
 #endif
