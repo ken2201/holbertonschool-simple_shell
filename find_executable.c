@@ -28,7 +28,6 @@ int find_executable(char *command, char *full_path)
 		}
 		token = strtok(NULL, ":");
 	}
-
 	free(path_copy);
 	return (0);
 }
