@@ -33,6 +33,7 @@ The shell operates in interactive mode, where it displays a prompt and waits for
 1. Execute an external command:
    ```bash
    $ ls
+   $ /bin/ls
    ```
 
 2. Exit the shell:

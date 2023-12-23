@@ -18,13 +18,13 @@ char *find_executable(char *command)
 	char *path_copy = strdup(path);
 	char *token = strtok(path_copy, ":");
 	char *full_path;
+
 	if (strchr(command, '/') != NULL)
 	{
-	       return (command);
+		return (command);
 	}
 	while (token != NULL)
 	{
-		
 		full_path = malloc(sizeof(char *) * (strlen(token) + strlen(command) + 2));
 		sprintf(full_path, "%s/%s", token, command);
 		if (access(full_path, X_OK) == 0)
